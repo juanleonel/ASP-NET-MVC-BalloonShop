@@ -8,35 +8,15 @@ using System.Threading.Tasks;
 
 namespace BalloShoopApp.Domain.DataAccess
 {
-    public static class CategoryDA
+    public class CategoryDA : DapperBase
     {
-        static CategoryDA()
+       
+
+        public IList<Entities.Category> GetCategories() 
         {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
+            const string sql = "[dbo].[spSelCategories]";
 
-        public static IList<Entities.Category> GetCategories() {
-
-            IList<Entities.Category> result = null;
-
-            DbCommand comm = GenericDataAccess.CreateCommand();
-            // set the stored procedure name
-            comm.CommandText = "[dbo].[spSelCategories]";
-            // execute the stored procedure and return the results
-            var reader = GenericDataAccess.ExecuteIDataReaderCommand(comm);
-
-            while (reader.Read())
-            {
-                result.Add(new Entities.Category()
-                {
-                    ID = Convert.ToInt32(reader["ID"]),
-                    Description = reader["Description"].ToString(),
-                    Name = reader["Name"].ToString()
-                }); ;
-            }
-            return result;
+            return Query<Entities.Category>(sql, null, commandType: CommandType.StoredProcedure).ToList();
         }
 
         // Retrieve the list of departments

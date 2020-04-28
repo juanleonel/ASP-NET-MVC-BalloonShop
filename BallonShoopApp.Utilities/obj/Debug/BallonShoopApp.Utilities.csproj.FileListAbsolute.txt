@@ -1,0 +1,5 @@
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BallonShoopApp.Utilities\bin\Debug\BallonShoopApp.Utilities.dll
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BallonShoopApp.Utilities\bin\Debug\BallonShoopApp.Utilities.pdb
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BallonShoopApp.Utilities\obj\Debug\BallonShoopApp.Utilities.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BallonShoopApp.Utilities\obj\Debug\BallonShoopApp.Utilities.dll
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BallonShoopApp.Utilities\obj\Debug\BallonShoopApp.Utilities.pdb

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -44,7 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BalloonShopConfiguration.cs" />
+    <Compile Include="DataAccess\BaseModel.cs" />
     <Compile Include="DataAccess\CategoryDA.cs" />
+    <Compile Include="DataAccess\ConnectionContainer.cs" />
+    <Compile Include="DataAccess\DapperBase.cs" />
+    <Compile Include="DataAccess\DapperModelQuery.cs" />
+    <Compile Include="DataAccess\DepartmentDA.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

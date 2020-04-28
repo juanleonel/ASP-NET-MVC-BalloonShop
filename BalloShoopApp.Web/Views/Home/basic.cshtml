@@ -1,0 +1,24 @@
+﻿@model BalloShoopApp.Web.Models.Category
+
+@{
+    ViewBag.Title = "basic";
+}
+
+<h2>basic</h2>
+
+<h2>Hello <span data-bind="text: getName()"></span></h2>
+
+@section Scripts {
+    <script>
+        function ViewModel(Name, Description) {
+            var self = this;
+            self.name = Name + ' ' + Description;
+            self.getName = function () {
+                return self.name;
+            };
+        };
+
+        var viewModel = new ViewModel('@Model.Name', '@Model.Description');
+        ko.applyBindings(viewModel);
+    </script>
+}

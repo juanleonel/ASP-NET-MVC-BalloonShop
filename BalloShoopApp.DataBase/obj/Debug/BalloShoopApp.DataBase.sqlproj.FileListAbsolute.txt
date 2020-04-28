@@ -1,0 +1,6 @@
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.DataBase\bin\Debug\BalloShoopApp.DataBase.dacpac
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.DataBase\bin\Debug\BalloShoopApp.DataBase.dll
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.DataBase\bin\Debug\BalloShoopApp.DataBase.pdb
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.DataBase\obj\Debug\BalloShoopApp.DataBase.sqlprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.DataBase\obj\Debug\BalloShoopApp.DataBase.dll
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.DataBase\obj\Debug\BalloShoopApp.DataBase.pdb

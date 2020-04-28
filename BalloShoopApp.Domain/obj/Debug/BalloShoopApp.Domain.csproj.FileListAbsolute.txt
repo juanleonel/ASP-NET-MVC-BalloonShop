@@ -1,6 +1,9 @@
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\bin\Debug\BalloShoopApp.Domain.dll.config
 C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\bin\Debug\BalloShoopApp.Domain.dll
 C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\bin\Debug\BalloShoopApp.Domain.pdb
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\bin\Debug\Dapper.dll
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\bin\Debug\Dapper.xml
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\obj\Debug\BalloShoopApp.Domain.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\obj\Debug\BalloShoopApp.Domain.csproj.CopyComplete
 C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\obj\Debug\BalloShoopApp.Domain.dll
 C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\obj\Debug\BalloShoopApp.Domain.pdb
-C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\bin\Debug\BalloShoopApp.Domain.dll.config
-C:\Users\Usuario\source\repos\BalloShoopApp.Web\BalloShoopApp.Domain\obj\Debug\BalloShoopApp.Domain.csprojAssemblyReference.cache
