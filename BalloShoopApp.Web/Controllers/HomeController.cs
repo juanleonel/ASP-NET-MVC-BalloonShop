@@ -1,4 +1,5 @@
 ﻿using BalloShoopApp.Domain.DataAccess;
+using BalloShoopApp.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,16 @@ namespace BalloShoopApp.Web.Controllers
         {
             get { return _categoryDA ?? (_categoryDA = new CategoryDA()); }
         }
+
+        private DepartmentDA _departmentDA;
+        private DepartmentDA DepartmentDA
+        {
+            get { return _departmentDA ?? (_departmentDA = new DepartmentDA()); }
+        }
+
         public ActionResult Index()
         {
+           
             return View();
         }
 
@@ -44,12 +53,33 @@ namespace BalloShoopApp.Web.Controllers
 
         public ActionResult basic()
         {
-            var category = new Models.Category();
-            category.ID = 1;
-            category.Name = "Toys";
-            category.Description = "Description";
+            var category = new Models.Category
+            {
+                ID = 1,
+                Name = "Toys",
+                Description = "Description"
+            };
 
             return View(category);
         }
+
+        public ActionResult GetDepartments() 
+        {
+            List<vmDepartment> departments = new List<vmDepartment>();
+
+            var result = DepartmentDA.GetDepartments().Select(x => new vmDepartment()
+            {
+                ID = x.ID,
+                Name = x.Name,
+                Description = x.Description,
+                CreatedAt = x.CreatedAt,
+                CreatedUser = x.CreatedUser,
+                UpdatedAt = x.UpdatedAt,
+                UpdatedUser = x.UpdatedUser
+            }).ToList();
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

@@ -63,5 +63,7 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Categories.sql" />
     <Build Include="dbo\Stored Procedures\spSelCategories.sql" />
+    <Build Include="dbo\Tables\Departments.sql" />
+    <Build Include="dbo\Stored Procedures\spSelDepartments.sql" />
   </ItemGroup>
 </Project>

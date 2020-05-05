@@ -1,31 +1,157 @@
-﻿@{
+﻿ 
+@using BalloShoopApp.Web.Helpers
+@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="col-lg-3 col-md-3">
+        @Html.Partial("_Department")
+        @*<table class="table table-bordered table-striped">
+            <tbody data-bind="foreach: departments">
+                <tr>
+                    <td data-bind="visible:false , text: ID "></td>
+                    <td data-bind="text: Name"></td>
+                    <td data-bind="text: Description"></td>
+
+
+                </tr>
+            </tbody>
+        </table>*@
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-lg-9 col-md-9">
+        @Html.Partial("_Carousel")
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="#">
+                        <img alt="" class="card-img-top" src="http://placehold.it/700x400" />
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">
+                                Item Two
+                            </a>
+                        </h4>
+                        <h5>
+                            $24.99
+                        </h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted text-warning">
+                            ★ ★ ★ ★ ☆
+                        </small>
+                        <div class="card-buttons">
+                            <a class="btn btn-info btn-coustom">
+                                Info
+                            </a>
+                            <a class="btn btn-info btn-coustom">
+                                Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 ">
+                <div class="card h-100">
+                    <a href="#">
+                        <img alt="" class="card-img-top" src="http://placehold.it/700x400" />
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">
+                                Item Two
+                            </a>
+                        </h4>
+                        <h5>
+                            $24.99
+                        </h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            ★ ★ ★ ★ ☆
+                        </small>
+                        <div class="card-buttons">
+                            <a class="btn btn-info btn-coustom">
+                                Info
+                            </a>
+                            <a class="btn btn-info btn-coustom">
+                                Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 my-4">
+                <div class="card h-100">
+                    <a href="#">
+                        <img alt="" class="card-img-top" src="http://placehold.it/700x400" />
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">
+                                Item Two
+                            </a>
+                        </h4>
+                        <h5>
+                            $24.99
+                        </h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            ★ ★ ★ ★ ☆
+                        </small>
+                        <div class="card-buttons">
+                            <a class="btn btn-info btn-coustom">
+                                Info
+                            </a>
+                            <a class="btn btn-info btn-coustom">
+                                Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+           
+
+            function ViewModel(departments) {
+                var self = this;
+
+                self.departments = departments;
+
+            };
+             
+            // Initialize the view-model
+            $.ajax({
+                url: 'GetDepartments',
+                cache: false,
+                type: 'GET',              
+                data: {},
+                success: function (data) {
+                   var viewModel = new ViewModel(data);
+                   ko.applyBindings(viewModel);
+                }
+            });
+            
+        });
+        
+         
+    </script>
+}
